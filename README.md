@@ -1,4 +1,4 @@
-# vramfs
+# vramfs with swap
 OpenCL vRAMfs with swap for Great Justice!
 
 execute this madness with :
