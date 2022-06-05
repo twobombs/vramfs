@@ -7,6 +7,8 @@ sleep 10
 dd if=/dev/zero of=/swapvramfs/swapfile bs=1M count=1024
 mkswap /swapvramfs/swapfile
 chmod 777 /swapvramfs/swapfile
-swapon /swapvramfs/swapfile
+
+mount 127.0.0.1:/swapvramfs /swapnfs
+swapon /swapnfs/swapfile
 
 tail -f /dev/null
