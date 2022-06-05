@@ -1,6 +1,6 @@
 FROM twobombs/cudacluster
 
-RUN git clone https://github.com/Overv/vramfs.git && apt install -y libfuse3-dev && clean all && make && ln /usr/bin/fusermount /usr/bin/fusermount3
+RUN git clone https://github.com/Overv/vramfs.git && apt install -y libfuse3-dev && apt clean all && make && ln /usr/bin/fusermount /usr/bin/fusermount3
 RUN mkdir swapvramfs
 
 COPY run-vramfs /root/run-vramfs
