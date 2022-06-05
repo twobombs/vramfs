@@ -1,5 +1,5 @@
 # vramfs with swap
-OpenCL vRAMfs with swap for Great Justice!
+OpenCL vRAMfs with swap with NFS mount for Great Justice!
 
 execute this madness with :
 - docker run -d -privileged twobombs/vramfs -v /swapvramfs:/swapvramfs
