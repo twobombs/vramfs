@@ -5,7 +5,8 @@ RUN git clone https://github.com/Overv/vramfs.git && cd vramfs && make
 
 RUN mkdir swapvramfs && mkdir swapnfs
 
-COPY exports /etc/exports && exportfs -a
+COPY exports /etc/exports
+RUN exportfs -a
 
 COPY run-vramfs /root/run-vramfs
 RUN chmod 755 /root/run-vramfs
