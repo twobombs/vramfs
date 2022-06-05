@@ -1,0 +1,5 @@
+#!/bin/bash
+
+cd vramfs && bin/vramfs /vramfs 1G
+
+tail -f /dev/null
