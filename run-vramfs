@@ -1,5 +1,12 @@
 #!/bin/bash
 
-cd vramfs && bin/vramfs /vramfs 1G
+cd vramfs && bin/vramfs /swapvramfs 1G &
+
+sleep 10
+
+fallocate -l 1G /swapvramfs/swapfile
+mkswap /swapvramfs/swapfile
+chmod 777 /swapvramfs/swapfile
+swapon /swapvramfs/swapfile
 
 tail -f /dev/null
