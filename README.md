@@ -1,4 +1,4 @@
-# vramfs with swap
+# vramfs with swap on NFS-roids
 OpenCL vRAMfs swap with NFS mount for Great Justice!
 
 execute this madness with :
