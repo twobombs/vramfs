@@ -1,10 +1,10 @@
 #!/bin/bash
 
-cd vramfs && bin/vramfs /swapvramfs 1G &
+cd /vramfs && bin/vramfs /swapvramfs 1G &
 
 sleep 10
 
-fallocate -l 1G /swapvramfs/swapfile
+dd if=/dev/zero of=/swapvramfs/swapfile bs=1024 count=1048576
 mkswap /swapvramfs/swapfile
 chmod 777 /swapvramfs/swapfile
 swapon /swapvramfs/swapfile
